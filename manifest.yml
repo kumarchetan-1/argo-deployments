@@ -5,6 +5,6 @@ metadata:
 spec: 
   containers:
    - name: todo-app-gitops
-     image: chetankumar01/todo-app-gitops:4b17f948a0488d5f48bcb7cdb4d806625225cc56
+     image: chetankumar01/todo-app-gitops:9e65de39b3f1e12c3a67a027d316bd45e69b2e31
      ports:
        - containerPort: 3000
