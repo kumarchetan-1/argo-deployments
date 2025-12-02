@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: pod
+apiVersion: v1
+kind: Pod
 metadata:
   name: todo-app-pod
 spec: 
