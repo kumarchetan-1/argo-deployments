@@ -1,12 +1,22 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: deployment
 metadata:
-  name: nginx
-spec:
-  containers:
-  - name: nginx
-    image: nginx
-    ports:
-    - containerPort: 80
-
-
+  name: todo-app-deployment
+spec: 
+  replicas: 2
+  
+  selector:
+    matchlabels:
+       app: todo-app
+       
+  template:
+    metadata:
+      labels:
+        app: todo-app
+        
+    spec:
+      containers:
+       - name: todo-app-gitops
+         image: chetankumar01/todo-app-gitops:4b17f948a0488d5f48bcb7cdb4d806625225cc56
+         ports:
+           - containerPort: 3000
